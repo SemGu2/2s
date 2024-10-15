@@ -3,7 +3,7 @@ import java.util.*
 fun main() {
     val input = Scanner(System.`in`)
 
-    println("Enter Wizard's mana:")
+    println("Enter Wizard's mana:")//
     val mana:Int = input.nextInt()
 
     println("Enter Robot's battery:")
