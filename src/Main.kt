@@ -2,6 +2,8 @@ import java.util.*
 
 fun main() {
     val input = Scanner(System.`in`)
+    println("THE WIZARD deals double damage as long as he has mana.")
+    println("Mana drains by 1 every attack.")
     println("Enter Wizard's hp, power, mana:")
     var hp:Int = input.nextInt()
     var power:Int = input.nextInt()
@@ -9,12 +11,16 @@ fun main() {
 
     val wiz = Wizard(hp,power,mana)
 
+    println("THE ROBOT deals damage equal to his power*battery/10.")
+    println("Battery drains by 10 every attack.")
     println("Enter Robot's hp, power, battery:")
     hp = input.nextInt()
     power = input.nextInt()
     val battery:Int = input.nextInt()
     val rob = Robot(hp,power,battery)
 
+    println("THE KNIGHT deals damage equal to his power,")
+    println("but can reduce damage taken by the amount of his defense.")
     println("Enter Knight's hp, power, defense")
     hp = input.nextInt()
     power = input.nextInt()

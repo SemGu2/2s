@@ -8,11 +8,15 @@ class Wizard(
             h.hurtSelf(super.power * 2)
             mana--
         }
+        else
+        {
+            h.hurtSelf(super.power)
+        }
     }
 
     override fun toString(): String {
-        val hp:Int = super.health;
-        val pwr:Int = super.power;
+        val hp:Int = super.health
+        val pwr:Int = super.power
         return "Wizard(hp = $hp, power = $pwr, mana = $mana)"
     }
 }

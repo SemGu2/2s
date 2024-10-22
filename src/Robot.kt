@@ -6,12 +6,12 @@ class Robot(
 
     override fun attack(h: Human) {
         h.hurtSelf(super.power/10*battery)
-        battery--
+        battery-=10
     }
 
     override fun toString(): String {
-        val hp:Int = super.health;
-        val pwr:Int = super.power;
+        val hp:Int = super.health
+        val pwr:Int = super.power
         return "Robot(hp = $hp, power = $pwr, battery = $battery)"
     }
 }
