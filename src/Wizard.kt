@@ -1,6 +1,8 @@
 class Wizard(
+    hp:Int,
+    pwr:Int,
     var mana:Int = 10
-): Human() {
+): Human(hp,pwr) {
     override fun attack(h: Human) {
         if (mana>0) {
             h.hurtSelf(super.power * 2)
@@ -9,7 +11,8 @@ class Wizard(
     }
 
     override fun toString(): String {
-        var hp:Int = super.health;
-        return "Wizard(hp = $hp, mana = $mana)"
+        val hp:Int = super.health;
+        val pwr:Int = super.power;
+        return "Wizard(hp = $hp, power = $pwr, mana = $mana)"
     }
 }

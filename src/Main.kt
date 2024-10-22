@@ -2,29 +2,40 @@ import java.util.*
 
 fun main() {
     val input = Scanner(System.`in`)
-
-    println("Enter Wizard's mana:")//
+    var hp:Int
+    var power:Int
+    println("Enter Wizard's hp, power, mana:")
+    hp = input.nextInt()
+    power = input.nextInt()
     val mana:Int = input.nextInt()
 
-    println("Enter Robot's battery:")
+    val wiz:Wizard = Wizard(hp,power,mana)
+
+    println("Enter Robot's hp, power, battery:")
+    hp = input.nextInt()
+    power = input.nextInt()
     val battery:Int = input.nextInt()
+    val rob:Robot = Robot(hp,power,battery)
 
-    println("Enter Knight's defense")
+    println("Enter Knight's hp, power, defense")
+    hp = input.nextInt()
+    power = input.nextInt()
     val defense:Int = input.nextInt()
+    val kht:Knight = Knight(hp,power,defense)
 
-    val wiz:Wizard = Wizard(mana)
-    val rob:Robot = Robot(battery)
-    val kht:Knight = Knight(defense)
+
+
 
     val array = arrayOf(wiz,rob,kht)
+
     val namesArray = arrayOf("The Wizard", "The Robot", "The Night")
 
     println("To attack enter the index of the attacker and the index of the defender")
     println("To heal enter the same index twice")
     println("Character's indexes:")
-    println("1 - Wizard")
-    println("2 - Robot")
-    println("3 - Knight")
+    println("1 - $wiz")
+    println("2 - $rob")
+    println("3 - $kht")
 
     while (array[0].health>0 && array[1].health>0 && array[2].health>0)
     {

@@ -1,13 +1,16 @@
 class Knight(
+    hp:Int,
+    pwr:Int,
     var defense:Int = 10
-): Human() {
+    ): Human(hp,pwr) {
     override fun hurtSelf(p: Int) {
         super.health-=(p-defense)
         if (health<0) health = 0
     }
 
     override fun toString(): String {
-        var hp:Int = super.health;
-        return "Knight(hp = $hp, defence = $defense)"
+        val hp:Int = super.health;
+        val pwr:Int = super.power
+        return "Knight(hp = $hp,power = $pwr, defence = $defense)"
     }
 }
