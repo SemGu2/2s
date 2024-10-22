@@ -2,26 +2,24 @@ import java.util.*
 
 fun main() {
     val input = Scanner(System.`in`)
-    var hp:Int
-    var power:Int
     println("Enter Wizard's hp, power, mana:")
-    hp = input.nextInt()
-    power = input.nextInt()
+    var hp:Int = input.nextInt()
+    var power:Int = input.nextInt()
     val mana:Int = input.nextInt()
 
-    val wiz:Wizard = Wizard(hp,power,mana)
+    val wiz = Wizard(hp,power,mana)
 
     println("Enter Robot's hp, power, battery:")
     hp = input.nextInt()
     power = input.nextInt()
     val battery:Int = input.nextInt()
-    val rob:Robot = Robot(hp,power,battery)
+    val rob = Robot(hp,power,battery)
 
     println("Enter Knight's hp, power, defense")
     hp = input.nextInt()
     power = input.nextInt()
     val defense:Int = input.nextInt()
-    val kht:Knight = Knight(hp,power,defense)
+    val kht = Knight(hp,power,defense)
 
 
 
